@@ -5,7 +5,7 @@ function displayMessage() {
     Swal.fire(
         {
             backdrop: false,
-            title: 'Display Hundred',
+            title: 'Display a Hundred',
             text: msg
         }
     );
