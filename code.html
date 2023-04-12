@@ -80,16 +80,28 @@
 function getValues() {
 // declared that start/endValue string is to pull and "hold" 
 // the values from the HTMl ID "start/endValue"
-let startValue = document.getElementById('startValue').value; // fetch startValue = "0" user/HTML
-let endValue = document.getElementById('endValue').value; // fetch endValue = "100" from user/HTML
+    let startValue = document.getElementById('startValue').value; // fetch startValue = "0" from user/HTML
+    let endValue = document.getElementById('endValue').value; // fetch endValue = "100" from user/HTML
 // convert value from string to integer/value ex: startNumber/endNumber
-let startNumber = parseInt(startValue); 
-let endNumber = parseInt(endValue); 
-// array created from startNumber/endNumber, values stored inside array numberArray
-let numberArray = generateNumbers(startNumber, endNumber);
-// displaysNumbers displays numberArray values
-displayNumbers(numberArray);
-}
+    let startNumber = parseInt(startValue); 
+    let endNumber = parseInt(endValue); 
+/* they are valid numbers - not "NaN"*/
+// if start is an integer it's true, 
+// if it's not a number, it's false
+    if (Number.isInteger(startNumber) && Number.isInteger(endNumber)) {
+        // array created from startNumber/endNumber, values stored inside array numberArray
+    let numberArray = generateNumbers(startNumber, endNumber);
+    // displaysNumbers displays numberArray values
+        displayNumbers(numberArray);
+    }
+    } else {
+        //display an error
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops!',
+            text: 'Please enter valid numbers for the start and end values.'
+        });
+    }
 
 // generate the range of numbers to display
 // Business/logic function
