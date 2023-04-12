@@ -2,12 +2,11 @@
 // Entry point of application AKA Controller function
 function getValues() {
     let startValue = document.getElementById('startValue').value; // startValue = "0"
-    let endValue = document.getElementById('endValue').value;
+    let endValue = document.getElementById('endValue').value; // endValue = "0"
 
-    let startNumber = parseInt(startValue); // example: startNumber = 0
-    let endNumber = parseInt(endValue); // example: endNumber = 0
+    let startNumber = parseInt(startValue); 
+    let endNumber = parseInt(endValue); 
 
-    // example: array[start = 0, end = 100]
     let numberArray = generateNumbers(startNumber, endNumber);
     displayNumbers(numberArray);
 }
@@ -16,8 +15,8 @@ function getValues() {
 // Business/logic function
 function generateNumbers(start, end) {
     let basketOfNumbers = [];
-    // start at integer number; 
-    // keep running as long as (it's less than or equal to 100); 
+    // starts at integer number; 
+    // keep running as long as (it's less than or equal to endNumber); 
     // start at index number and add plus 1 each time 
     // until previous <= statement is no longer true
     for (let number = start; number <= end; number = number + 1) {

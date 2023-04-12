@@ -342,3 +342,6 @@ script[type='text/plain'][class*='language-'] {
 	opacity: 1;
 }
 
+code {
+    font-size: 1.25rem!important;
+}
