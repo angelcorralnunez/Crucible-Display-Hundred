@@ -107,3 +107,7 @@ footer .bi:hover {
     
 }
 
+.evenNumber {
+    font-weight: bolder;
+    color: red !important;
+}

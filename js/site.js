@@ -7,7 +7,7 @@ function getValues() {
     let startNumber = parseInt(startValue); // example: startNumber = 0
     let endNumber = parseInt(endValue); // example: endNumber = 0
 
-// example: array[start = 0, end = 100]
+    // example: array[start = 0, end = 100]
     let numberArray = generateNumbers(startNumber, endNumber);
     displayNumbers(numberArray);
 }
@@ -16,10 +16,10 @@ function getValues() {
 // Business/logic function
 function generateNumbers(start, end) {
     let basketOfNumbers = [];
-// start at integer number; 
-// keep running as long as (it's less than or equal to 100); 
-// start at index number and add plus 1 each time 
-// until previous <= statement is no longer true
+    // start at integer number; 
+    // keep running as long as (it's less than or equal to 100); 
+    // start at index number and add plus 1 each time 
+    // until previous <= statement is no longer true
     for (let number = start; number <= end; number = number + 1) {
         number;
         basketOfNumbers.push(number); //[0, 2, 3,..., 100]
@@ -31,12 +31,16 @@ function generateNumbers(start, end) {
 // View function
 function displayNumbers(numbers) { //[0, 2, 3,..., 100] => length = example: 101 digits or spaces
     let results = '';
+
     for (let index = 0; index < numbers.length; index = index + 1) {
-// start at 0.... as long as number < 101.... keep looping, then add 1
-        let currentNumber = numbers[index]; 
-        results = results + "<tr><td>" + currentNumber + "</tr></td>";
-// results = "<tr><td>10</tr></td>11<tr><td>12</tr></td>..."
+        let currentNumber = numbers[index];
+        if (currentNumber % 2 == 0) {
+            results = results + `<tr><td class="evenNumber">${currentNumber}</td></tr>`;
+        } else {
+        results = results + `<tr><td>${currentNumber}</td></tr>`;
+        }
     }
+    // results = "<tr><td>10</tr></td>11<tr><td>12</tr></td>..."
     let tableBody = document.getElementById('results');
     tableBody.innerHTML = results;
 }
