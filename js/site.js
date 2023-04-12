@@ -16,7 +16,6 @@ function getValues() {
     let numberArray = generateNumbers(startNumber, endNumber);
     // displaysNumbers displays numberArray values
         displayNumbers(numberArray);
-    }
     } else {
         //display an error
         Swal.fire({
@@ -25,7 +24,7 @@ function getValues() {
             text: 'Please enter valid numbers for the start and end values.'
         });
     }
-
+}
 // generate the range of numbers to display
 // Business/logic function
 function generateNumbers(start, end) {
@@ -64,4 +63,3 @@ function displayNumbers(numbers) { //[0, 2, 3,..., 100] => length = example: 101
     let tableBody = document.getElementById('results');
     tableBody.innerHTML = results;
 }
-
