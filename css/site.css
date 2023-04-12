@@ -112,3 +112,6 @@ footer .bi:hover {
     color: #29b3ad !important;
 }
 
+#displayHundred {
+    border-radius: 30px;
+}
