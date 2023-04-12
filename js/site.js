@@ -1,6 +1,8 @@
 // get the start and end numbers from the page
 // Entry point of application AKA Controller function
 function getValues() {
+// declared that start/endValue string is to pull and "hold" 
+// the values from the HTMl ID "start/endValue"
     let startValue = document.getElementById('startValue').value; // fetch startValue = "0" from user/HTML
     let endValue = document.getElementById('endValue').value; // fetch endValue = "100" from user/HTML
 // convert value from string to integer/value ex: startNumber/endNumber
