@@ -8,7 +8,7 @@ function getValues() {
 // convert value from string to integer/value ex: startNumber/endNumber
     let startNumber = parseInt(startValue); 
     let endNumber = parseInt(endValue); 
-/* they are valid numbers - not "NaN"*/
+// they are valid numbers - not "NaN"
 // if start is an integer it's true, 
 // if it's not a number, it's false
     if (Number.isInteger(startNumber) && Number.isInteger(endNumber)) {
@@ -42,20 +42,20 @@ function generateNumbers(start, end) {
     return basketOfNumbers; // => [0, 2, 3,..., 100]
 }
 
-// placing the generated numbers  on the page AND bold coloring the even numbers
+// placing the generated numbers  on the page AND coloring the even numbers
 // View function
 function displayNumbers(numbers) { //[0, 2, 3,..., 100] => length = example: 101 digits or spaces
     let results = '';
 // for loop adds 1 to index number, then calculates if index numner is divisible by 2,
-// if remainder equals "0" exactly, ifna match it applies the CSS class of "evenNumber" 
-// coloring the even integers,else/otherwise it returns the (odd) integers with normal 
-// table row styling. 
+// if remainder equals "0" exactly, if a match it applies the CSS class of "evenNumber" 
+// coloring the even integers purple, else/otherwise it returns the (odd) integers 
+// colored black. 
     for (let index = 0; index < numbers.length; index = index + 1) {
         let currentNumber = numbers[index];
         if (currentNumber % 2 == 0) {
             results = results + `<tr><td class="evenNumber">${currentNumber}</td></tr>`;
         } else {
-        results = results + `<tr><td>${currentNumber}</td></tr>`;
+        results = results + `<tr><td class="oddNumber">${currentNumber}</td></tr>`;
         }
     }
 // results = "<tr><td>10</tr></td>11<tr><td>12</tr></td>..."
