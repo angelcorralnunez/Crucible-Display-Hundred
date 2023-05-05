@@ -130,11 +130,6 @@ footer {
     padding-right: .5rem;
 }
 
-.checklist>li i {
-    color: var(--acn-secondary-color); 
-    padding-right: .5rem;
-}
-
 .devIcons {
     font-size: 3rem;
     padding: .5rem;
