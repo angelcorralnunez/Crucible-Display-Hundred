@@ -101,6 +101,10 @@ footer {
     font-family: 'Alkatra', cursive;
 }
 
+.txt-wht-outline {
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 1);
+}
+
 .dk-gry-txt-secondary {
     color: rgba(77, 77, 77, 1)!important;
 }
